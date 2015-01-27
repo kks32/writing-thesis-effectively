@@ -406,6 +406,80 @@ Color & color, xcolor \\
 \end{frame}
 
 
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\section{Good practices}
+\subsection{Equations}
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+
+\begin{frame}[fragile]{Equations, equations everywhere}
+\begin{itemize}
+\item Use \cmdbs{mathit} instead of \cmdbs{textit} inside math environments.
+\item Why are dollar signs \keys{\$} special? We use them to mark mathematics 
+in text.\\[1ex]
+\begin{exampletwouptiny}
+% not so good:
+Let a and b be distinct positive
+integers, and let c = a - b + 1.
+
+% much better:
+Let $a$ and $b$ be distinct positive
+integers, and let $c = a - b + 1$.
+\end{exampletwouptiny}
+\item Use caret \verb|^| for superscripts and underscore \cmmd{`\_'} 
+for subscripts.
+\begin{exampletwouptiny}
+$y = c_2 x^2 + c_1 x + c_0$
+\end{exampletwouptiny}
+\vskip 2ex
+\item Use curly braces $\{$ and $\}$ to group
+superscripts and subscripts.
+\begin{exampletwouptiny}
+$F_n = F_n-1 + F_n-2$     % oops!
+
+$F_n = F_{n-1} + F_{n-2}$ % ok!
+\end{exampletwouptiny}
+\item Detexify
+\href{http://detexify.kirelabs.org/classify.html}{http://detexify.kirelabs.org/classify.html}
+\begin{exampletwouptiny}
+$\Omega = \sum_{k=1}^{n} \omega_k \times \mu$
+\end{exampletwouptiny}
+\end{itemize}
+\end{frame}
+
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\begin{frame}[fragile]{Never use equation arrays}
+\begin{exampletwoup}
+\begin{eqnarray}
+E& = & m_0 c^2 \,,\\
+E^2& = &(m_0 c^2)^2 + (pc)^2 \,.
+\end{eqnarray}
+\end{exampletwoup}
+\vskip 2ex
+\begin{exampletwoup}
+\begin{equation}
+E = m_0 c^2 \,,
+\end{equation}
+\begin{equation}
+E^2 = (m_0 c^2)^2 + (pc)^2 \,.
+\end{equation}
+\end{exampletwoup}
+\vskip 2ex
+\begin{exampletwoup}
+\begin{align}
+E  =  m_0 c^2 \,,\\
+E^2  =  (m_0 c^2)^2 + (pc)^2 \,.
+\end{align}
+\end{exampletwoup}
+\end{frame}
+
 
 
 %*******************************************************************************
