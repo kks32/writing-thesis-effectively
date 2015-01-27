@@ -10,11 +10,22 @@
 %*******************************************************************************
 %******************************* Frame *****************************************
 %*******************************************************************************
-\section{Bursting the WYSIWYG bubble}
+\section{World outside the WYSIWYG bubble}
 
-\begin{frame}{Likelyhood of Word crashing}
+\begin{frame}{Why you shouldn't use Word to write your thesis}
   \centering
   \includegraphics[height=0.8\textheight]{figs/word_crash}
+\end{frame}
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\begin{frame}{Can you see beyond the WYSIWYG bubble?}
+  \begin{figure}
+    \centering
+    \includegraphics[height=0.8\textheight]{figs/LaTeX_Word.pdf}
+    \caption*{LaTeX vs Word}
+\end{figure}
 \end{frame}
 
 %*******************************************************************************
@@ -256,7 +267,7 @@ Eg., \cmdbs{documentclass\lbrack12pt\rbrack\{article\}}
 %******************************* Frame *****************************************
 %*******************************************************************************
 
-\begin{frame}[fragile]{\insertsubsection}
+\begin{frame}[fragile]{Title and Author}
 \begin{itemize}{\small
 \item Tell \LaTeX{} the \cmdbs{title} and \cmdbs{author} names in the preamble.
 \item Then use \cmdbs{maketitle} in the document to actually create the title.
@@ -277,7 +288,7 @@ Eg., \cmdbs{documentclass\lbrack12pt\rbrack\{article\}}
 %*******************************************************************************
 %******************************* Frame *****************************************
 %*******************************************************************************
-\begin{frame}{\insertsubsection}
+\begin{frame}{Sections}
 \begin{minipage}{0.55\linewidth}
 \inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
   {structure-sections.tex}
@@ -352,7 +363,7 @@ beamer& For writing presentations \\ \bottomrule
 \begin{frame}{LaTeX - Tool chains}
 \begin{figure}
 \centering
-\includegraphics[height=0.95\textheight]{figs/Latex-file-flow.png}
+\includegraphics[width=0.85\textwidth]{figs/Latex-file-flow.png}
 \end{figure}
 \end{frame}
 
