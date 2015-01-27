@@ -7,6 +7,7 @@
 \usepackage{minted}
 \usepackage{hyperref}
 \usepackage{multicol}
+\usepackage{multirow}
 \usepackage{tabularx}
 \usepackage{booktabs}
 \usepackage{menukeys}
@@ -66,6 +67,20 @@
    \end{minipage}
    \end{tabular}}}
 
+\newenvironment{exampletwouptinyfifty}
+  {\VerbatimEnvironment
+   \begin{VerbatimOut}{example.out}}
+  {\end{VerbatimOut}
+   \setlength{\parindent}{0pt}
+   \fbox{\begin{tabular}{l|l}
+   \begin{minipage}{0.45\textwidth}
+     \inputminted[fontsize=\scriptsize,resetmargins]{latex}{example.out}
+   \end{minipage} &
+   \begin{minipage}{0.45\textwidth}
+     \setlength{\parskip}{6pt plus 1pt minus 1pt}%
+     \raggedright\scriptsize\input{example.out}
+   \end{minipage}
+   \end{tabular}}}
 % ******************************** Meta-data ***********************************
 \mode<presentation>
 {
