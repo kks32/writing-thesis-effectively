@@ -125,9 +125,34 @@ do things.
 %*******************************************************************************
 %******************************* Frame *****************************************
 %*******************************************************************************
+\begin{frame}{Gerring started with \LaTeX}
+\begin{itemize}
+\item \textbf{Typesetting}
+\begin{itemize}
+\item \TeX Live - full version
+\item MiK\TeX - Windows (Basic installer)
+\end{itemize}
+\item \textbf{Off-line editors}
+\begin{itemize}
+\item \TeX Studio
+\item \TeX MakerX
+\end{itemize}
+\item \textbf{Online editors}
+\begin{itemize}
+\item Overleaf (formerly Write\LaTeX)
+\item Share\LaTeX
+\end{itemize}
+
+\end{itemize}
+
+\end{frame}
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
 \begin{frame}{How \LaTeX works? - The Magic}
 \begin{itemize}
-\item You write your document in \texttt{plain text} with \cmd{commands} that
+\item You write your document in \texttt{plain text} with \cmmd{commands} that
 describe its structure and meaning.
 \item The \LaTeX program processes your text and commands to produce a
 beautifully formatted document.
@@ -182,13 +207,95 @@ will ignore the rest of the line.
 %*******************************************************************************
 %******************************* Frame *****************************************
 %*******************************************************************************
+\begin{frame}{Declarations and Environments}
+\begin{block}{Declaration and commands\ldots}
+\begin{itemize}
+\item Are stated once
+\item Take effect until further notice
+\item Can optionally be constrained
+\end{itemize}
+Eg., \cmdbs{documentclass} or \cmdbs{includegraphics}
+\end{block}
+
+\begin{block}{Environments\ldots}
+\begin{itemize}
+\item Have matching begin and end declarations
+\item Must be constrained
+\end{itemize}
+Eg., \cmdbegin{document} \ldots \cmdend{document}
+\end{block}
+\end{frame}
+
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\begin{frame}{Arguments}
+\begin{block}{Required arguments\ldots}
+\begin{itemize}
+\item Are contained in curly braces
+\item Must be provided
+\end{itemize}
+Eg., \cmdbs{documentclass\{article\}}
+\end{block}
+
+\begin{block}{Optional arguments\ldots}
+\begin{itemize}
+\item Are contained in square bracket
+\item Can be left out, in which case default value is assumed
+\item Give you more control over the commands
+\end{itemize}
+Eg., \cmdbs{documentclass\lbrack12pt\rbrack\{article\}}
+\end{block}
+\end{frame}
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+
+\subsection{Title and Abstract}
+\begin{frame}[fragile]{\insertsubsection}
+\begin{itemize}{\small
+\item Tell \LaTeX{} the \cmdbs{title} and \cmdbs{author} names in the preamble.
+\item Then use \cmdbs{maketitle} in the document to actually create the title.
+\item Use the \bftt{abstract} environment to make an abstract.
+}\end{itemize}
+\centering
+\begin{minipage}{0.45\linewidth}
+\inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
+  {structure-title.tex}
+\end{minipage}
+\begin{minipage}{0.45\linewidth}
+\includegraphics[width=\textwidth,clip,trim=2.2in 7in 2.2in 
+2in]{structure-title.pdf}
+\end{minipage}
+\end{frame}
+
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\subsection{Sections}
+\begin{frame}{\insertsubsection}
+\begin{minipage}{0.55\linewidth}
+\inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
+  {structure-sections.tex}
+\end{minipage}
+\begin{minipage}{0.35\linewidth}
+\includegraphics[width=\textwidth,clip,trim=1.5in 6in 4in 
+1in]{structure-sections.pdf}
+\end{minipage}
+\end{frame}
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
 \begin{frame}{Let's try that \dots}
 \begin{itemize}
 \item write\LaTeX{} is a website for writing documents in \LaTeX.
 \item It `compiles' your \LaTeX{} automatically to show you the results.
 \vskip 2em
 \begin{center}
-\fbox{\href{\wlnewdoc{Ex1-Hello/Ex1-Hello.tex}}{%
+\fbox{\href{\wlnewdoc{paper.tex}}{%
 Click here to open the example document in \wllogo{}}}
 \\[1ex]\scriptsize{}Or go to this URL: 
 \url{\wlserver/docs/1778557gcvcyt/clone}\\
@@ -269,77 +376,7 @@ the output, you have to \emph{escape} it by preceding it with a backslash.
 \end{itemize}
 \end{frame}
 
-%*******************************************************************************
-%******************************* Frame *****************************************
-%*******************************************************************************
 
-\begin{frame}{Exercise 2: Typesetting}
-
-\begin{block}{Typeset this in \LaTeX:
-\footnote{\url{http://en.wikipedia.org/wiki/Economy_of_the_United_States}}}
-In March 2006, Congress raised that ceiling an additional \$0.79 trillion to
-\$8.97 trillion, which is approximately 68\% of GDP. As of October 4, 2008, the
-``Emergency Economic Stabilization Act of 2008'' raised the current debt ceiling
-to \$11.3 trillion.
-\end{block}
-\vskip 2ex
-\begin{center}
-\fbox{\href{\wlnewdoc{Ex2-Typeset/Ex2-Typeset.tex}}{%
-Click to open this exercise in \wllogo{}}}
-\end{center}
-
-\begin{itemize}
-\item Hint: watch out for characters with special meanings!
-\item Once you've tried,
-\fbox{\href{\wlnewdoc{Ex2-Typeset/Ex2-Typeset-solution.tex}}{%
-click here to see my solution}}.
-\end{itemize}
-\end{frame}
-
-%*******************************************************************************
-%******************************* Frame *****************************************
-%*******************************************************************************
-\begin{frame}{Declarations and Environments}
-\begin{block}{Declaration and commands\ldots}
-\begin{itemize}
-\item Are stated once
-\item Take effect until further notice
-\item Can optionally be constrained
-\end{itemize}
-Eg., \cmdbs{documentclass} or \cmdbs{includegraphics}
-\end{block}
-
-\begin{block}{Environments\ldots}
-\begin{itemize}
-\item Have matching begin and end declarations
-\item Must be constrained
-\end{itemize}
-Eg., \cmdbegin{document} \ldots \cmdend{document}
-\end{block}
-\end{frame}
-
-
-%*******************************************************************************
-%******************************* Frame *****************************************
-%*******************************************************************************
-\begin{frame}{Arguments}
-\begin{block}{Required arguments\ldots}
-\begin{itemize}
-\item Are contained in curly braces
-\item Must be provided
-\end{itemize}
-Eg., \cmdbs{documentclass\{article\}}
-\end{block}
-
-\begin{block}{Optional arguments\ldots}
-\begin{itemize}
-\item Are contained in square bracket
-\item Can be left out, in which case default value is assumed
-\item Give you more control over the commands
-\end{itemize}
-Eg., \cmdbs{documentclass\lbrack12pt\rbrack\{article\}}
-\end{block}
-\end{frame}
 
 
 %*******************************************************************************
@@ -369,55 +406,11 @@ Color & color, xcolor \\
 \end{frame}
 
 
-%*******************************************************************************
-%******************************* Frame *****************************************
-%*******************************************************************************
 
-\begin{frame}{Handling Errors}
-\begin{itemize}
-\item \LaTeX{} can get confused when it is trying to compile your document. If
-it does, it stops with an error, which you must fix before it will produce
-any output.
-\item For example, if you misspell \cmdbs{emph} as \cmdbs{meph}, \LaTeX{} will
-stop with an ``undefined control sequence'' error, because ``meph'' is not
-one of the commands it knows.
-\end{itemize}
-\begin{block}{Advice on Errors}
-\begin{enumerate}
-\item Don't panic! Errors happen.
-\item Fix them as soon as they arise --- if what you just typed caused an error,
-you can start your debugging there.
-\item If there are multiple errors, start with the first one --- the cause may
-even be above it.
-\end{enumerate}
-\end{block}
-\end{frame}
 
 %*******************************************************************************
 %******************************* Frame *****************************************
 %*******************************************************************************
-\begin{frame}{Exercise 3: Errors and Warnings}
-\begin{itemize}
-\item Class not found
-\item Too many \}'s
-\item Undefined control sequence
-\item Warning: Undeful hbox
-\item Warning: Overful hbox
-\end{itemize}
-\begin{center}
-\fbox{\href{\wlnewdoc{Ex3-Errors/Ex3-Errors.tex}}{%
-Click to open this exercise in \wllogo{}}}
-\end{center}
-
-\begin{itemize}
-\item Hint: solve one issue at a time, start with the first error
-\fbox{\href{\wlnewdoc{Ex3-Errors/Ex3-Errors-solution.tex}}{%
-click here to see my solution}}.
-\end{itemize}
-
-\end{frame}
-
-%**********************************************FRAME***************************************
 \begin{frame}{Acknowlegements}
 This \LaTeX for Beginners course is loosely based on and examples from:
 \begin{itemize}
