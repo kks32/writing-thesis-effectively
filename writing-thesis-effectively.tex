@@ -346,7 +346,15 @@ beamer& For writing presentations \\ \bottomrule
 \end{figure}
 \end{frame}
 
-
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\begin{frame}{LaTeX - Tool chains}
+\begin{figure}
+\centering
+\includegraphics[height=0.95\textheight]{figs/Latex-file-flow.png}
+\end{figure}
+\end{frame}
 
 %*******************************************************************************
 %******************************* Frame *****************************************
@@ -549,12 +557,31 @@ float package. This is somewhat equivalent to h! \\ \bottomrule
 \end{tabularx}
 \end{frame}
 
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\begin{frame}{Colour blindness}
+\begin{figure}
+\includegraphics[height=0.6\textheight]{figs/colourblindness_rainbow.png}
+\end{figure}
+\begin{itemize}
+\item Making graphs with colour-blind viewers in mind - Charlotte Houldcroft
+\href{https://kks32.github.io/latex/articles/colour-blindness/}
+{https://kks32.github.io/latex/articles/colour-blindness/}
 
-\subsection{table}
+\item Use \cmmd{GNUPlot} to generate vector graphics of your plots. Make sure 
+the plots have different line styles so it works well on a black and white 
+print.
+\end{itemize}
+\end{frame}
+
+
 
 %*******************************************************************************
 %******************************* Frame *****************************************
 %*******************************************************************************
+\subsection{table}
+
 \begin{frame}[fragile]{A badly formatted table}
 \begin{exampletwouptinyfifty}
 \begin{tabular}{|l|c|c|c|c|}
@@ -721,11 +748,99 @@ list of references; it knows most standard styles, and you can design your own.
 \end{minipage}
 \end{frame}
 
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\begin{frame}{PhD Thesis Template}
+
+\begin{center}
+\fbox{\href{https://github.com/kks32/phd-thesis-template/blob/master/README.md}{%
+Detailed instructions on how to use the template}}
+
+\vspace*{1em}
+
+Write your PhD Thesis online
+
+\vspace*{1em}
+
+\fbox{\href{https://www.overleaf.com/templates/phd-thesis-template-for-cambridge-university-engineering-department-cued/kgfqybfnqkdf}{%
+Click to open the template in OverLeaf}}
+
+\vspace*{1em}
+
+\fbox{\href{https://www.sharelatex.com/templates/thesis/cambridge-university-engineering-department-(28cued)-latex-phd-thesis-template}{%
+Click to open the template in share\LaTeX}}
+
+\vspace*{1em}
+
+or use it off-line 
+
+\vspace*{1em}
+
+\fbox{\href{http://github.com/kks32/phd-thesis-template/}{%
+View the template in github}}
+\end{center}
+\end{frame}
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\section{Version Control}
+\begin{frame}{Final.doc}
+\begin{figure}
+\includegraphics[height=0.8\textheight]{figs/final.png}
+\end{figure}
+\end{frame}
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\begin{frame}{Keeping track of your files - Version Control}
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{figs/thesis-git.png}
+\end{figure}
+\end{frame}
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\begin{frame}{What's Git?}
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{figs/git.png}
+\end{figure}
+\end{frame}
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\begin{frame}{Using Git with your thesis}
+\begin{itemize}
+\item Online git hosting services
+\begin{itemize}
+\item GitHub - Free student version for 2 years (private repos)
+\item Bitbucket - Free student version and unlimited private repos
+\end{itemize}
+\item Local (desktop services)
+\begin{itemize}
+\item GitHub for Windows
+\item SourceTree (works for both GitHub and Bitbucket repos) 
+\end{itemize}
+\item Excellent tutorials on how to set-up 
+\href{https://www.atlassian.com/git/tutorials/setting-up-a-repository/}
+{https://www.atlassian.com/git/tutorials/setting-up-a-repository/}
+\end{itemize}
+\end{frame}
+
+
+
 %*******************************************************************************
 %******************************* Frame *****************************************
 %*******************************************************************************
 \begin{frame}{Acknowlegements}
-This \LaTeX for Beginners course is loosely based on and examples from:
+This \LaTeX talk is based on and examples from:
 \begin{itemize}
 \item John Miller's An interactive introduction to \LaTeX: 
 \href{https://www.writelatex.com/blog/7}{https://www.writelatex.com/blog/7}
