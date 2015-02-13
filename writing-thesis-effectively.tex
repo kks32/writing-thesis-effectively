@@ -24,7 +24,7 @@
   \begin{figure}
     \centering
     \includegraphics[height=0.8\textheight]{figs/LaTeX_Word.pdf}
-    \caption*{LaTeX vs Word}
+    \caption*{Word vs. \LaTeX}
 \end{figure}
 \end{frame}
 
@@ -35,7 +35,7 @@
   \begin{figure}
     \centering
     \includegraphics[width=\linewidth]{figs/LaTeX_InDesign_Word.png}
-    \caption*{Word vs InDesign vs LaTeX}
+    \caption*{Word vs. InDesign vs. \LaTeX}
 \end{figure}
 \end{frame}
 
@@ -150,7 +150,7 @@ do things.
 \item \TeX Studio
 \item \TeX MakerX
 \end{itemize}
-\item \textbf{Online editors}
+\item \textbf{Online editors \& \LaTeX compilers}
 \begin{itemize}
 \item Overleaf (formerly Write\LaTeX)
 \item Share\LaTeX
@@ -478,6 +478,10 @@ $\Omega = \sum_{k=1}^{n} \omega_k \times \mu$
 %******************************* Frame *****************************************
 %*******************************************************************************
 \begin{frame}[fragile]{Never use equation arrays}
+\begin{itemize}
+\item Use \cmmd{align} instead of \cmmd{eqnarray} when you have multiple 
+equations.
+\end{itemize}
 \begin{exampletwoup}
 \begin{eqnarray}
 E& = & m_0 c^2 \,,\\
@@ -497,7 +501,7 @@ E^2 = (m_0 c^2)^2 + (pc)^2 \,.
 \begin{exampletwoup}
 \begin{align}
 E  =  m_0 c^2 \,,\\
-E^2  =  (m_0 c^2)^2 + (pc)^2 \,.
+E^2  = (m_0 c^2)^2 + (pc)^2 \,.
 \end{align}
 \end{exampletwoup}
 \end{frame}
@@ -819,6 +823,13 @@ View the template in github}}
 %******************************* Frame *****************************************
 %*******************************************************************************
 \begin{frame}{What's Git?}
+\begin{itemize}
+\item Git is a distributed version control system that keeps track of your 
+changes.
+\item Git only stores the `delta', i.e., only the difference between the 
+previous version and the current version, so it doesn't take up lots of 
+valuable hard disk space. Git also compresses your file.
+\end{itemize}
 \begin{figure}
   \centering
   \includegraphics[width=0.8\textwidth]{figs/git.png}
@@ -867,7 +878,7 @@ View the template in github}}
 %******************************* Frame *****************************************
 %*******************************************************************************
 \begin{frame}{Acknowlegements}
-This \LaTeX talk is based on and examples from:
+This \LaTeX~talk is based on and examples from:
 \begin{itemize}
 \item John Miller's An interactive introduction to \LaTeX: 
 \href{https://www.writelatex.com/blog/7}{https://www.writelatex.com/blog/7}
